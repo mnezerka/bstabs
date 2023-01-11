@@ -1,0 +1,47 @@
+.bstabs-search
+{
+	/*border: 1px solid red;*/
+}
+
+.bstabs-search label {
+	width: 140px;
+	display: block;
+	float: left;
+}
+
+.bstabs-search input {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.bstabs-search .att {
+	padding-top: 3px;
+}
+
+.bstabs {
+	margin-top: 20px;
+	width: 100%;
+	border: 1px solid white;
+}
+
+.bstabs th {
+	background-color: #f0f0f0;
+	border: 1px solid white;
+	font-size: 9pt;
+}
+
+.bstabs td {
+	border: 1px solid white;
+	font-size: 9pt;
+}
+
+.bstab-details {
+}
+
+.bstab-details .label {
+	xfloat: left;
+}
+
+.bstab-details .value {
+	xfloat: left;
+}

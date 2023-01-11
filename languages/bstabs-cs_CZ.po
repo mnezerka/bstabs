@@ -1,0 +1,314 @@
+# Copyright (C) 2014 BSTabs
+# This file is distributed under the same license as the BSTabs package.
+msgid ""
+msgstr ""
+"Project-Id-Version: BSTabs 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/bstabs\n"
+"POT-Creation-Date: 2014-05-02 18:30:21+00:00\n"
+"PO-Revision-Date: 2014-05-02 20:31+0100\n"
+"Last-Translator: Michal Nezerka <michal.nezerka@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: bstabs.php:99 bstabs.php:263 bstabs.php:287 bstabs.php:368
+msgid "Tabs"
+msgstr "Tabulatury"
+
+#: bstabs.php:100
+msgid "Tab"
+msgstr "Tabulatura"
+
+#: bstabs.php:101
+msgid "Add new"
+msgstr "Vytvořit novou"
+
+#: bstabs.php:102
+msgid "Add new tab"
+msgstr "Vytvořit novou tabulaturu"
+
+#: bstabs.php:103
+msgid "Edit tab"
+msgstr "Upravit tabulaturu"
+
+#: bstabs.php:104
+msgid "New tab"
+msgstr "Nová tabulatura"
+
+#: bstabs.php:105
+msgid "View tab"
+msgstr "Zobrazit tabulaturu"
+
+#: bstabs.php:106
+msgid "Search for tab"
+msgstr "Vyhledat tabulaturu"
+
+#: bstabs.php:107 bstabs.php:593
+msgid "No tabs were found"
+msgstr "Nebyly nalezeny žádné tabulatury"
+
+#: bstabs.php:134
+msgid "Tabulature information"
+msgstr "Informace o tabulatuře"
+
+#: bstabs.php:140 bstabs.php:245 bstabs.php:283 bstabs.php:350 bstabs.php:615
+msgid "Instrument"
+msgstr "Nástroj"
+
+#: bstabs.php:145 bstabs.php:254 bstabs.php:285 bstabs.php:359 bstabs.php:641
+msgid "Level"
+msgstr "Obtížnost"
+
+#: bstabs.php:150 bstabs.php:257 bstabs.php:362 bstabs.php:628
+msgid "Genre"
+msgstr "Styl"
+
+#: bstabs.php:155 bstabs.php:251 bstabs.php:286 bstabs.php:356 bstabs.php:656
+msgid "Key"
+msgstr "Tónina"
+
+#: bstabs.php:160 bstabs.php:248 bstabs.php:284 bstabs.php:353 bstabs.php:668
+msgid "Author"
+msgstr "Autor"
+
+#: bstabs.php:165 bstabs.php:260 bstabs.php:365
+msgid "Tuning"
+msgstr "Ladění"
+
+#: bstabs.php:170 bstabs.php:269 bstabs.php:289 bstabs.php:374
+msgid "Links"
+msgstr "Odkazy"
+
+#: bstabs.php:173
+msgid ""
+"List of links, where each line should have following format: \"http://"
+"something.somedomain; Some description\""
+msgstr ""
+"Seznam odkazů, kde každý řádek reprezentuje jeden odkaz. Formát řádku je: "
+"\"http://neco.nejakadomena; Nějaký popis\""
+
+#: bstabs.php:266 bstabs.php:288 bstabs.php:371
+msgid "Audio"
+msgstr "Audio ukázky"
+
+#: bstabs.php:346
+msgid "Tune"
+msgstr "Skladba"
+
+#: bstabs.php:377
+msgid "Published"
+msgstr "Publikováno"
+
+#: bstabs.php:607
+msgid "Name"
+msgstr "Název"
+
+#: bstabs.php:616
+msgid "All instruments"
+msgstr "Všechny nástroje"
+
+#: bstabs.php:629
+msgid "All genres"
+msgstr "Všechny styly"
+
+#: bstabs.php:642
+msgid "All levels"
+msgstr "Všechny úrovně"
+
+#: bstabs.php:657
+msgid "All keys"
+msgstr "Všechny tóniny"
+
+#: bstabs.php:669
+msgid "All authors"
+msgstr "Všichni autoři"
+
+#: bstabs.php:682
+msgid "Search"
+msgstr "Vyhledat"
+
+#: bstabs.php:684
+msgid "Show all"
+msgstr "Zobrazit všechny"
+
+#: bstabs.php:764
+msgid "Guitar"
+msgstr "Kytara"
+
+#: bstabs.php:765
+msgid "Banjo"
+msgstr "Banjo"
+
+#: bstabs.php:766
+msgid "Dobro"
+msgstr "Dobro"
+
+#: bstabs.php:767
+msgid "Fiddle"
+msgstr "Housle"
+
+#: bstabs.php:768
+msgid "Mandolin"
+msgstr "Mandolína"
+
+#: bstabs.php:769
+msgid "Bass"
+msgstr "Basa"
+
+#: bstabs.php:810
+msgid "Beginner"
+msgstr "Nízká"
+
+#: bstabs.php:811
+msgid "Intermediate"
+msgstr "Střední"
+
+#: bstabs.php:812
+msgid "Advanced"
+msgstr "Vysoká"
+
+#: bstabs.php:846
+msgid "Bluegrass"
+msgstr "Bluegrass"
+
+#: bstabs.php:847
+msgid "Blues"
+msgstr "Blues"
+
+#: bstabs.php:848
+msgid "Classical"
+msgstr "Klasika"
+
+#: bstabs.php:849
+msgid "Folk"
+msgstr "Folk"
+
+#: bstabs.php:850
+msgid "Jazz"
+msgstr "Jazz"
+
+#: bstabs.php:851
+msgid "Rock"
+msgstr "Rock"
+
+#: bstabs.php:874
+msgid "C"
+msgstr "C"
+
+#: bstabs.php:875
+msgid "Cm"
+msgstr "Cm"
+
+#: bstabs.php:876
+msgid "C#"
+msgstr "C#"
+
+#: bstabs.php:877
+msgid "C#m"
+msgstr "C#m"
+
+#: bstabs.php:878
+msgid "D"
+msgstr "D"
+
+#: bstabs.php:879
+msgid "Dm"
+msgstr "Dm"
+
+#: bstabs.php:880
+msgid "Eb"
+msgstr "Eb"
+
+#: bstabs.php:881
+msgid "Ebm"
+msgstr "Ebm"
+
+#: bstabs.php:882
+msgid "E"
+msgstr "E"
+
+#: bstabs.php:883
+msgid "Em"
+msgstr "Em"
+
+#: bstabs.php:884
+msgid "F"
+msgstr "F"
+
+#: bstabs.php:885
+msgid "Fm"
+msgstr "Fm"
+
+#: bstabs.php:886
+msgid "F#"
+msgstr "F#"
+
+#: bstabs.php:887
+msgid "F#m"
+msgstr "F#m"
+
+#: bstabs.php:888
+msgid "G"
+msgstr "G"
+
+#: bstabs.php:889
+msgid "Gm"
+msgstr "Gm"
+
+#: bstabs.php:890
+msgid "Ab"
+msgstr "Ab"
+
+#: bstabs.php:891
+msgid "Abm"
+msgstr "Abm"
+
+#: bstabs.php:892
+msgid "A"
+msgstr "A"
+
+#: bstabs.php:893
+msgid "Am"
+msgstr "Am"
+
+#: bstabs.php:894
+msgid "Bb"
+msgstr "B"
+
+#: bstabs.php:895
+msgid "Bbm"
+msgstr "Bm"
+
+#: bstabs.php:896
+msgid "B"
+msgstr "H"
+
+#: bstabs.php:897
+msgid "Bm"
+msgstr "Hm"
+
+#. Plugin Name of the plugin/theme
+msgid "BSTabs"
+msgstr "BSTabs"
+
+#. Description of the plugin/theme
+msgid "WP Extension for simple management of tabulatures"
+msgstr "Rozšíření WP o jednoduchou správu tabulatur"
+
+#. Author of the plugin/theme
+msgid "Michal Nezerka"
+msgstr "Michal Nežerka"
+
+#. Author URI of the plugin/theme
+msgid "http://blue.pavoucek.cz"
+msgstr "http://blue.pavoucek.cz"
+
+#~ msgid "Transcriber"
+#~ msgstr "Transcriber"
+
+#~ msgid "All transcribers"
+#~ msgstr "Všichni transcribers"

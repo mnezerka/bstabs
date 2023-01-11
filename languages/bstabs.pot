@@ -1,0 +1,303 @@
+# Copyright (C) 2014 BSTabs
+# This file is distributed under the same license as the BSTabs package.
+msgid ""
+msgstr ""
+"Project-Id-Version: BSTabs 1.9\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/bstabs\n"
+"POT-Creation-Date: 2014-05-02 18:30:21+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: bstabs.php:99 bstabs.php:263 bstabs.php:287 bstabs.php:368
+msgid "Tabs"
+msgstr ""
+
+#: bstabs.php:100
+msgid "Tab"
+msgstr ""
+
+#: bstabs.php:101
+msgid "Add new"
+msgstr ""
+
+#: bstabs.php:102
+msgid "Add new tab"
+msgstr ""
+
+#: bstabs.php:103
+msgid "Edit tab"
+msgstr ""
+
+#: bstabs.php:104
+msgid "New tab"
+msgstr ""
+
+#: bstabs.php:105
+msgid "View tab"
+msgstr ""
+
+#: bstabs.php:106
+msgid "Search for tab"
+msgstr ""
+
+#: bstabs.php:107 bstabs.php:593
+msgid "No tabs were found"
+msgstr ""
+
+#: bstabs.php:134
+msgid "Tabulature information"
+msgstr ""
+
+#: bstabs.php:140 bstabs.php:245 bstabs.php:283 bstabs.php:350 bstabs.php:615
+msgid "Instrument"
+msgstr ""
+
+#: bstabs.php:145 bstabs.php:254 bstabs.php:285 bstabs.php:359 bstabs.php:641
+msgid "Level"
+msgstr ""
+
+#: bstabs.php:150 bstabs.php:257 bstabs.php:362 bstabs.php:628
+msgid "Genre"
+msgstr ""
+
+#: bstabs.php:155 bstabs.php:251 bstabs.php:286 bstabs.php:356 bstabs.php:656
+msgid "Key"
+msgstr ""
+
+#: bstabs.php:160 bstabs.php:248 bstabs.php:284 bstabs.php:353 bstabs.php:668
+msgid "Author"
+msgstr ""
+
+#: bstabs.php:165 bstabs.php:260 bstabs.php:365
+msgid "Tuning"
+msgstr ""
+
+#: bstabs.php:170 bstabs.php:269 bstabs.php:289 bstabs.php:374
+msgid "Links"
+msgstr ""
+
+#: bstabs.php:173
+msgid ""
+"List of links, where each line should have following format: \"http://"
+"something.somedomain; Some description\""
+msgstr ""
+
+#: bstabs.php:266 bstabs.php:288 bstabs.php:371
+msgid "Audio"
+msgstr ""
+
+#: bstabs.php:346
+msgid "Tune"
+msgstr ""
+
+#: bstabs.php:377
+msgid "Published"
+msgstr ""
+
+#: bstabs.php:607
+msgid "Name"
+msgstr ""
+
+#: bstabs.php:616
+msgid "All instruments"
+msgstr ""
+
+#: bstabs.php:629
+msgid "All genres"
+msgstr ""
+
+#: bstabs.php:642
+msgid "All levels"
+msgstr ""
+
+#: bstabs.php:657
+msgid "All keys"
+msgstr ""
+
+#: bstabs.php:669
+msgid "All authors"
+msgstr ""
+
+#: bstabs.php:682
+msgid "Search"
+msgstr ""
+
+#: bstabs.php:684
+msgid "Show all"
+msgstr ""
+
+#: bstabs.php:764
+msgid "Guitar"
+msgstr ""
+
+#: bstabs.php:765
+msgid "Banjo"
+msgstr ""
+
+#: bstabs.php:766
+msgid "Dobro"
+msgstr ""
+
+#: bstabs.php:767
+msgid "Fiddle"
+msgstr ""
+
+#: bstabs.php:768
+msgid "Mandolin"
+msgstr ""
+
+#: bstabs.php:769
+msgid "Bass"
+msgstr ""
+
+#: bstabs.php:810
+msgid "Beginner"
+msgstr ""
+
+#: bstabs.php:811
+msgid "Intermediate"
+msgstr ""
+
+#: bstabs.php:812
+msgid "Advanced"
+msgstr ""
+
+#: bstabs.php:846
+msgid "Bluegrass"
+msgstr ""
+
+#: bstabs.php:847
+msgid "Blues"
+msgstr ""
+
+#: bstabs.php:848
+msgid "Classical"
+msgstr ""
+
+#: bstabs.php:849
+msgid "Folk"
+msgstr ""
+
+#: bstabs.php:850
+msgid "Jazz"
+msgstr ""
+
+#: bstabs.php:851
+msgid "Rock"
+msgstr ""
+
+#: bstabs.php:874
+msgid "C"
+msgstr ""
+
+#: bstabs.php:875
+msgid "Cm"
+msgstr ""
+
+#: bstabs.php:876
+msgid "C#"
+msgstr ""
+
+#: bstabs.php:877
+msgid "C#m"
+msgstr ""
+
+#: bstabs.php:878
+msgid "D"
+msgstr ""
+
+#: bstabs.php:879
+msgid "Dm"
+msgstr ""
+
+#: bstabs.php:880
+msgid "Eb"
+msgstr ""
+
+#: bstabs.php:881
+msgid "Ebm"
+msgstr ""
+
+#: bstabs.php:882
+msgid "E"
+msgstr ""
+
+#: bstabs.php:883
+msgid "Em"
+msgstr ""
+
+#: bstabs.php:884
+msgid "F"
+msgstr ""
+
+#: bstabs.php:885
+msgid "Fm"
+msgstr ""
+
+#: bstabs.php:886
+msgid "F#"
+msgstr ""
+
+#: bstabs.php:887
+msgid "F#m"
+msgstr ""
+
+#: bstabs.php:888
+msgid "G"
+msgstr ""
+
+#: bstabs.php:889
+msgid "Gm"
+msgstr ""
+
+#: bstabs.php:890
+msgid "Ab"
+msgstr ""
+
+#: bstabs.php:891
+msgid "Abm"
+msgstr ""
+
+#: bstabs.php:892
+msgid "A"
+msgstr ""
+
+#: bstabs.php:893
+msgid "Am"
+msgstr ""
+
+#: bstabs.php:894
+msgid "Bb"
+msgstr ""
+
+#: bstabs.php:895
+msgid "Bbm"
+msgstr ""
+
+#: bstabs.php:896
+msgid "B"
+msgstr ""
+
+#: bstabs.php:897
+msgid "Bm"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "BSTabs"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "WP Extension for simple management of tabulatures"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Michal Nezerka"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://blue.pavoucek.cz"
+msgstr ""
