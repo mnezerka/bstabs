@@ -40,6 +40,7 @@ class BSTabs
         'gtp' => 'application/gtp',
         'tef' => 'application/tef',
         'tab' => 'application/tab',
+        'txt' => 'text/plain',
         'btab' => 'application/btab',
         'tg' => 'application/tg',
         'tbl' => 'application/tbl',
