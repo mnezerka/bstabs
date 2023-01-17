@@ -89,11 +89,14 @@ class BSTabs
 
         add_filter('upload_mimes', array($this, 'onUploadMimeTypes'));
         add_filter('the_content', array($this, 'onContent'));
+
+        // register custom URL query parameters (used by search form)
+        add_filter('query_vars', array($this, 'onThemeslugQueryVars'));
     }
 
     public function onInit()
     {
-        // register new post type for farms
+        // register new post type for tabs 
         register_post_type('bstab', array(
             'labels' => array(
                 'name' => __('Tabs', 'bstabs'),
@@ -106,21 +109,10 @@ class BSTabs
                 'search_items' => __('Search for tab', 'bstabs'),
                 'not_found' => __('No tabs were found', 'bstabs')),
             'public' => true,
-            //'menu_icon' => $this->pluginUrl . '/images/farms-icon.png',
             'has_archive' => true,
             'supports' => array('title', 'editor'),
-            'capability_type' => 'tab',
-            'exclude_from_search' => true,
-            'capabilities' => array(
-                'publish_posts' => 'publish_tabs',
-                'edit_posts' => 'edit_tabs',
-                'edit_others_posts' => 'edit_others_tabs',
-                'delete_posts' => 'delete_tabs',
-                'delete_others_posts' => 'delete_others_tabs',
-                'read_private_posts' => 'read_private_tabs',
-                'edit_post' => 'edit_tab',
-                'delete_post' => 'delete_tab',
-                'read_post' => 'read_tab')));
+            'exclude_from_search' => true
+            ));
 
         // tab metabox ----------------------------------------------- 
         $levels = array('-' => '-');
@@ -299,7 +291,7 @@ class BSTabs
 
         switch ($column)
         {
-            // farm fields
+            // tab fields
             case 'bstabs_instrument':
                 $instruments = $this->getInstruments();
                 $instrument = $custom['bstabs_instrument'][0];
@@ -404,8 +396,6 @@ class BSTabs
             switch ($f) 
             {
                 case 'title':
-                    //get_permalink($post->id)
-                    //$result .= '<a href="' . $post->guid . '">' . $post->post_title . '</a>';
                     $result .= '<a href="' . get_permalink($post->id) . '">' . $post->post_title . '</a>';
                     break;
                 case 'instrument':
@@ -434,12 +424,11 @@ class BSTabs
                     $result .= $this->formatFiles($files, BSTabs::$mimeTypesAudio);
                     break;
                 case 'links':
-                    // prepare links
                     $links = $this->getLinks($custom['bstabs_links'][0]);
                     $result .= $this->formatLinks($links);
                     break;
                 case 'published':
-                    $result .= get_the_date(); //$post->post_date;  
+                    $result .= get_the_date(); //$post->post_date;
                     break;
                 default:
                     $result .= '';
