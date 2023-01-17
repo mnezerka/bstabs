@@ -56,6 +56,10 @@ class BSTabs
         'ogg|oga' => 'audio/ogg',
         'wma' => 'audio/x-ms-wma');
 
+    static public function url_param_exists($name) {
+        return strlen(get_query_var($name)) > 0;
+    }
+
     public function __construct()  
     {  
         $this->pluginPath = plugin_dir_path(__FILE__);
@@ -268,6 +272,19 @@ class BSTabs
         $content .= $contentTabs;
 
         return $content;
+    }
+
+    public function onThemeslugQueryVars($qvars) {
+        $qvars[] = 'bstabs_action';
+        $qvars[] = 'bstabs_name';
+        $qvars[] = 'bstabs_instrument';
+        $qvars[] = 'bstabs_genre';
+        $qvars[] = 'bstabs_level';
+        $qvars[] = 'bstabs_key';
+        $qvars[] = 'bstabs_author';
+        $qvars[] = 'bstabs_submit_button_filter';
+        $qvars[] = 'bstabs_submit_button_all';
+        return $qvars;
     }
 
     public function onAddTabsListingColumns($cols)
@@ -513,23 +530,22 @@ class BSTabs
         $showTabs = !$searchMode;
 
         // check if form was submitted
-        if ($searchMode and (isset($_POST['bstabs_submit_button_filter']) or isset($_POST['bstabs_submit_button_all'])))
+        if ($searchMode and get_query_var('bstabs_action') == 'tabs-search') {}
         {
             // process all search form fields
-            $formName = sanitize_text_field($_POST['bstabs_name']);
-            $formGenre = sanitize_text_field($_POST['bstabs_genre']);
-            $formLevel = sanitize_text_field($_POST['bstabs_level']);
-            $formKey = sanitize_text_field($_POST['bstabs_key']);
-            $formAuthor = sanitize_text_field(base64_decode($_POST['bstabs_author']));
+            $formInstrument = sanitize_text_field(get_query_var('bstabs_instrument'));
+            $formName = sanitize_text_field(get_query_var('bstabs_name'));
+            $formGenre = sanitize_text_field(get_query_var('bstabs_genre'));
+            $formLevel = sanitize_text_field(get_query_var('bstabs_level'));
+            $formKey = sanitize_text_field(get_query_var('bstabs_key'));
+            $formAuthor = sanitize_text_field(base64_decode(get_query_var('bstabs_author')));
 
             $showTabs = true;
         }
 
-        // check if form values should be used as filtering parameters 
-        if ($searchMode and (isset($_POST['bstabs_submit_button_filter'])))
-        {
-            if ($atts['instrument'] === 'all')
-                $sInstrument = sanitize_text_field($_POST['bstabs_instrument']);
+        // check if form values should be used as filtering parameters
+        if ($searchMode and BSTabs::url_param_exists('bstabs_submit_button_filter')) { 
+            $sInstrument = $formInstrument;
             $sName = $formName;
             $sGenre = $formGenre;
             $sLevel = $formLevel;
@@ -596,7 +612,7 @@ class BSTabs
         // generate search form
         if ($searchMode)
         {
-            $result .= '<form id="tabs-search" method="post">';
+            $result .= '<form id="tabs-search" method="get">';
             $result .= '<div class="bstabs-search">';
             $result .= '  <div class="att">';
             $result .= '    <label for="bstabs_name">' . __('Name', 'bstabs') . ':</label>';
