@@ -477,21 +477,25 @@ class BSTabs
         if (!is_null($atts['orderby']))
             if (!in_array($atts['orderby'], array('author', 'title', 'published')))
                $atts['orderby'] = NULL;
+
         // - order
         if (!is_null($atts['order']))
             if (!in_array($atts['order'], array('asc', 'desc')))
                $atts['order'] = NULL;
+
         // - header
         if (!is_bool($atts['header']))
             if ($atts['header'] == 'no')
                 $atts['header'] = false;
             else
                 $atts['header'] = true;
+
         // - fields
         $showFields = BSTABS::$TAB_FIELDS_DEFAULT;
         if (!is_null($atts['fields']))
         {
-            $fieldsParts = split(';', trim($atts['fields']));
+            $fieldsParts = explode(';', trim($atts['fields']));
+
             $fields = array();
             foreach ($fieldsParts as $f) 
                 if (in_array($f, BSTABS::$TAB_FIELDS))
