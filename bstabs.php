@@ -1,11 +1,10 @@
 <?php
 /*
-vim: set expandtab sw=4 ts=4 sts=4 foldmethod=indent:
 Plugin Name: BSTabs 
 Description: WP Extension for simple management of tabulatures
-Version: 1.12
+Version: 1.13
 Author: Michal Nezerka 
-Author URI: http://blue.pavoucek.cz
+Author URI: https://blue.pavoucek.cz/
 Text Domain: bstabs 
 Domain Path: /languages
 */
@@ -25,7 +24,6 @@ class BSTabs
     static public $CAP_MANAGE = 'manage_tabs';
     static public $TAB_FIELDS =         array('title', 'instrument', 'author', 'key', 'level', 'genre', 'tuning', 'audio', 'tabs', 'links', 'published');
     static public $TAB_FIELDS_DEFAULT = array('title', 'instrument', 'author', 'key', 'level', 'genre', 'tuning', 'audio', 'tabs', 'links');
-
 
     static public $mimeTypesTab = array(
         'pdf' => 'application/pdf',
@@ -65,7 +63,7 @@ class BSTabs
         add_action('init', array($this, 'onInit'));
         add_action('plugins_loaded', array($this, 'onPluginsLoaded'));
 
-        // farm columns in admin listing ----------------------
+        // tabulature columns in admin listing ----------------------
         add_filter('manage_edit-bstab_columns', array($this, 'onAddTabsListingColumns'));
         add_action('manage_posts_custom_column', array($this, 'onShowListingCustomColumn'));
 
