@@ -45,6 +45,15 @@ or show search dialog:
 
 ## Changelog
 
+### 1.13
+
+* fix problem with `fields` parameter of `tabs` shortcode (`split` method was
+  removed from PHP)
+* tabs search form uses URL query parameters to allow users to generate and
+  share link to pre-filled form
+* fix ordering by title in cases, where qtranslate plugin is used for
+  multilingual content
+
 ### 1.12
 
 * registration of new media type with extension `mscz` for MuseScroe tabs
