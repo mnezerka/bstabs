@@ -83,13 +83,11 @@ class BSTabs
         wp_enqueue_script('jquery-ui-core');
         wp_enqueue_script('jquery-ui-autocomplete');
 
-        /*
         if (!is_admin())
         {
             //wp_enqueue_script('chained-min-js', plugins_url('/js/jquery.chained.min.js', __FILE__), array('jquery', 'jquery-ui-core'));
             wp_enqueue_style('bstabs-css', plugins_url('/css/bstabs.css', __FILE__));
         }
-        */
 
         add_filter('upload_mimes', array($this, 'onUploadMimeTypes'));
         add_filter('the_content', array($this, 'onContent'));
