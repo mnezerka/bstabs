@@ -96,6 +96,10 @@ class BSTabs
 
         // register custom URL query parameters (used by search form)
         add_filter('query_vars', array($this, 'onThemeslugQueryVars'));
+
+        // this filter aims to fix of sorting for multilingual content created
+        // in qtranslate-qt plugin
+        add_filter('posts_clauses', array($this, 'onPostClauses'), 999, 2);
     }
 
     public function onInit()
@@ -285,6 +289,27 @@ class BSTabs
         $qvars[] = 'bstabs_submit_button_filter';
         $qvars[] = 'bstabs_submit_button_all';
         return $qvars;
+    }
+
+    /* modify SQL clauses to solve issue with sorting by title when using
+     * qtranslate-xt plugin. More information here:
+     *  https://kuchenundkakao.wordpress.com/2015/02/09/mqtranslate-qtranslate-slug-qtranslate-fixing-the-orderby-title-problem/
+     */
+    public function onPostClauses($clauses, $query) {
+        // 
+        if (!is_admin()) {
+            global $q_config;
+            // check if var exists and is not null - detection if qtranslate plugin is active
+            if ($q_config) {
+                $lang = $q_config['language'];
+                if ($query->query_vars['orderby'] == 'title') {
+                    $clauses['orderby'] = "SUBSTR(post_title, IF(LOCATE('<!--:".$lang."-->',post_title),LOCATE('<!--:".$lang."-->',post_title)+10, LOCATE('[:".$lang."]',post_title)+5),
+    IF(LOCATE('<!--:".$lang."-->',post_title),LOCATE('<!--:-->',post_title,LOCATE('<!--:".$lang."-->',post_title)+10) - (LOCATE('<!--:".$lang."-->',post_title)+10),
+    LOCATE('[:',post_title,LOCATE('[:".$lang."]',post_title)+5) - (LOCATE('[:".$lang."]',post_title)+5))) ".$query->query_vars['order'];
+                }
+            }
+        }
+        return $clauses;
     }
 
     public function onAddTabsListingColumns($cols)
