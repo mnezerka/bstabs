@@ -54,6 +54,9 @@ or show search dialog:
     * title is translated in older qtranslate plugin, where notation is ` <!--:en-->Title<!--:-->`
     * title is translated in qtranslate plugin, where notation is `[:en]Title[:]`
 
+* fix: don't show all tabulatures until user clicks on Search or Show All
+  button.
+
 ### 1.13
 
 * fix problem with `fields` parameter of `tabs` shortcode (`split` method was

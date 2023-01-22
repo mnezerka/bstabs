@@ -592,7 +592,7 @@ class BSTabs
         $showTabs = !$searchMode;
 
         // check if form was submitted
-        if ($searchMode and get_query_var('bstabs_action') == 'tabs-search') {}
+        if ($searchMode and get_query_var('bstabs_action') == 'tabs-search')
         {
             // process all search form fields
             $formInstrument = sanitize_text_field(get_query_var('bstabs_instrument'));
