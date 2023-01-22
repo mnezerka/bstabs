@@ -302,10 +302,47 @@ class BSTabs
             // check if var exists and is not null - detection if qtranslate plugin is active
             if ($q_config) {
                 $lang = $q_config['language'];
+
                 if ($query->query_vars['orderby'] == 'title') {
-                    $clauses['orderby'] = "SUBSTR(post_title, IF(LOCATE('<!--:".$lang."-->',post_title),LOCATE('<!--:".$lang."-->',post_title)+10, LOCATE('[:".$lang."]',post_title)+5),
-    IF(LOCATE('<!--:".$lang."-->',post_title),LOCATE('<!--:-->',post_title,LOCATE('<!--:".$lang."-->',post_title)+10) - (LOCATE('<!--:".$lang."-->',post_title)+10),
-    LOCATE('[:',post_title,LOCATE('[:".$lang."]',post_title)+5) - (LOCATE('[:".$lang."]',post_title)+5))) ".$query->query_vars['order'];
+
+                    /*
+                     * fix SQL clause for title sorting by addressing following cases:
+                     * 
+                     * 1. no title translation for title - keep title string as it is
+                     * 2. translation of older version of qtranslate plugin, strings are encoded as 
+                     *    <!--:en-->English Title<!--:-->, fix removes decoration and keeps just English Title
+                     * 3. translation of new version of qtranslate plugin, strings are encoded as 
+                     *    [:en]English Title[:], fix removes decoration and keeps just English Title
+                     *
+                     * MySQL functions used:
+                     * SUBSTR(string, start, length), where start indexing starts with 1 (not zero)
+                     * LOCATE(substring, string, start)
+                     * IF(condition, value_if_true, value_if_false)
+                    */
+                    $orderbystr = "SUBSTR(
+                        post_title,
+                        IF(
+                            LOCATE('<!--:".$lang."-->',post_title),
+                            LOCATE('<!--:".$lang."-->',post_title)+10,
+                            IF(
+                                LOCATE('[:".$lang."]',post_title),
+                                LOCATE('[:".$lang."]',post_title)+5,
+                                1
+                            )
+                        ),
+                        IF(
+                            LOCATE('<!--:".$lang."-->',post_title),
+                            LOCATE('<!--:-->',post_title,LOCATE('<!--:".$lang."-->',post_title)+10) - (LOCATE('<!--:".$lang."-->',post_title)+10),
+                            IF(
+                                LOCATE('[:".$lang."]',post_title),
+                                LOCATE('[:',post_title,LOCATE('[:".$lang."]',post_title)+5) - (LOCATE('[:".$lang."]',post_title)+5),
+                                LENGTH(post_title)
+                            )
+                        )
+                    )
+                    ";
+
+                    $clauses['orderby'] = $orderbystr . ' ' . $query->query_vars['order'];
                 }
             }
         }

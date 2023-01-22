@@ -45,6 +45,15 @@ or show search dialog:
 
 ## Changelog
 
+### 1.14
+
+* another set of fixes for ordering by title with qtranslate plugin, this
+  version solves three cases:
+
+    * title is not translated at all
+    * title is translated in older qtranslate plugin, where notation is ` <!--:en-->Title<!--:-->`
+    * title is translated in qtranslate plugin, where notation is `[:en]Title[:]`
+
 ### 1.13
 
 * fix problem with `fields` parameter of `tabs` shortcode (`split` method was
