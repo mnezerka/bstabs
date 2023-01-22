@@ -45,6 +45,11 @@ or show search dialog:
 
 ## Changelog
 
+### 1.15
+
+* make bstabs plugin consistent with Github Updater plugin to allow automatic
+  updates directly from github respository.
+
 ### 1.14
 
 * another set of fixes for ordering by title with qtranslate plugin, this

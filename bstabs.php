@@ -1,13 +1,14 @@
 <?php
 /*
-Plugin Name: BSTabs 
+Plugin Name: BSTabs
 Plugin URI: https://github.com/mnezerka/bstabs/
 GitHub Plugin URI: https://github.com/mnezerka/bstabs/
+Primary Branch: main
 Description: WP Extension for simple management of music tabulatures
-Version: 1.14
-Author: Michal Nezerka 
+Version: 1.15
+Author: Michal Nezerka
 Author URI: https://github.com/mnezerka/
-Text Domain: bstabs 
+Text Domain: bstabs
 Domain Path: /languages
 */
 
