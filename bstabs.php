@@ -4,7 +4,7 @@ Plugin Name: BSTabs
 Plugin URI: https://github.com/mnezerka/bstabs/
 GitHub Plugin URI: https://github.com/mnezerka/bstabs/
 Description: WP Extension for simple management of music tabulatures
-Version: 1.13
+Version: 1.14
 Author: Michal Nezerka 
 Author URI: https://github.com/mnezerka/
 Text Domain: bstabs 
